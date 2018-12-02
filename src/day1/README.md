@@ -1,6 +1,4 @@
 # Day 1
-Quite an easy day all in all.
-
 ### Part 1
 It's clear that all it searches for is the sum of all numbers. Fortunately kotlin has a
 built in summation function.
