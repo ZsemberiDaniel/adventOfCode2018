@@ -1,4 +1,5 @@
 import java.io.File
+import kotlin.system.measureTimeMillis
 
 class Main {
     companion object {
@@ -41,12 +42,19 @@ class Main {
                         if (inputTwoString == null) {"Second input had a problem!"} else {""})
             }
 
-            // solving the puzzles
-            puzzleSolver.readInput1(inputOneString)
-            print("Part 1:\n${puzzleSolver.solvePart1()}\n")
+            val millis1 = measureTimeMillis {
+                // solving the puzzles
+                puzzleSolver.readInput1(inputOneString)
+                println("Part 1:\n${puzzleSolver.solvePart1()}")
+            }
+            println("Part 1 took $millis1 milliseconds.")
 
-            puzzleSolver.readInput2(inputTwoString)
-            print("Part 2:\n${puzzleSolver.solvePart2()}")
+            val millis2 = measureTimeMillis {
+                puzzleSolver.readInput2(inputTwoString)
+                println("Part 2:\n${puzzleSolver.solvePart2()}")
+            }
+
+            println("Part 2 took $millis2 milliseconds.")
         }
     }
 }
