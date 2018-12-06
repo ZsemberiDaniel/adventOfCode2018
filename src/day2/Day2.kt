@@ -5,11 +5,11 @@ import RunnablePuzzleSolver
 class Day2 : RunnablePuzzleSolver {
     lateinit var ids: Array<String>
 
-    override fun readInput1(line: Array<String>) {
-        ids = line
+    override fun readInput1(lines: Array<String>) {
+        ids = lines
     }
 
-    override fun readInput2(line: Array<String>) { }
+    override fun readInput2(lines: Array<String>) { }
 
     override fun solvePart1(): String {
         var twiceCount = 0

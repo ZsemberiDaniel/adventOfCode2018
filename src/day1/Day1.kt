@@ -5,12 +5,12 @@ import RunnablePuzzleSolver
 class Day1: RunnablePuzzleSolver {
     private lateinit var changes: Array<Int>
 
-    override fun readInput1(line: Array<String>) {
-        // split line by spaces and map to ints
-        changes = line[0].split(" ").map { it.toInt() }.toTypedArray()
+    override fun readInput1(lines: Array<String>) {
+        // split lines by spaces and map to ints
+        changes = lines[0].split(" ").map { it.toInt() }.toTypedArray()
     }
 
-    override fun readInput2(line: Array<String>) { }
+    override fun readInput2(lines: Array<String>) { }
 
     override fun solvePart1(): String {
         return changes.sum().toString()

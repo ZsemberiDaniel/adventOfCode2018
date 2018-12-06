@@ -6,16 +6,16 @@ class Day3 : RunnablePuzzleSolver {
     private val fabricSize = 1000
     private lateinit var claims: List<Claim>
 
-    override fun readInput1(line: Array<String>) {
+    override fun readInput1(lines: Array<String>) {
         // splitting by all the delimiters and mapping to Claim objects
-        claims = line.map {
+        claims = lines.map {
             val split = it.split("#", " @ ", ",", ": ", "x")
 
             Claim(split[1].toInt(), split[2].toInt(), split[3].toInt(), split[4].toInt(), split[5].toInt())
         }
     }
 
-    override fun readInput2(line: Array<String>) { }
+    override fun readInput2(lines: Array<String>) { }
 
     override fun solvePart1(): String {
         val fabric: Array<Array<Int>> = Array(fabricSize + 1) { Array(fabricSize + 1) { 0 } }
